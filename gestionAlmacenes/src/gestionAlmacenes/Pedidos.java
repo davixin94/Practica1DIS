@@ -1,13 +1,12 @@
 package gestionAlmacenes;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 import gestionAlmacenes.Producto;
 
 public class Pedidos {
 	
-	private ArrayList<Producto> productos;
+	private ArrayList<String> productos;
 	private int cantidad;
 	private String calle;
 	private int numero;
@@ -15,11 +14,11 @@ public class Pedidos {
 	private String poblacion;
 	private String pais;
 	private String destinatario;
-	private Date fechaEntrega;
+	private String fechaEntrega;
 	
 	
-	public Pedidos(ArrayList<Producto> productos, int cantidad, String calle, int numero, int cp, String poblacion,
-			String pais, String destinatario, Date fechaEntrega) {
+	public Pedidos(ArrayList<String> productos, int cantidad, String calle, int numero, int cp, String poblacion,
+			String pais, String destinatario, String fechaEntrega) {
 		super();
 		this.productos = productos;
 		this.cantidad = cantidad;
@@ -33,12 +32,12 @@ public class Pedidos {
 	}
 
 
-	public ArrayList<Producto> getProductos() {
+	public ArrayList<String> getProductos() {
 		return productos;
 	}
 
 
-	public void setProductos(ArrayList<Producto> productos) {
+	public void setProductos(ArrayList<String> productos) {
 		this.productos = productos;
 	}
 
@@ -113,12 +112,12 @@ public class Pedidos {
 	}
 
 
-	public Date getFechaEntrega() {
+	public String getFechaEntrega() {
 		return fechaEntrega;
 	}
 
 
-	public void setFechaEntrega(Date fechaEntrega) {
+	public void setFechaEntrega(String fechaEntrega) {
 		this.fechaEntrega = fechaEntrega;
 	}
 	
