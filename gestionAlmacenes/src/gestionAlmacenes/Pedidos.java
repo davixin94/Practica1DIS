@@ -28,6 +28,14 @@ public class Pedidos {
 		this.destinatario = destinatario;
 		this.fechaEntrega = fechaEntrega;
 	}
+	
+	//Método toString para imprimir en el archivo xml
+	@Override
+	public String toString() {
+		return "\t<pedido>\n\t<productos>" + productos + "</productos>\n\t<cantidad>" + cantidad + "</cantidad>\n\t<calle>" + calle + "</calle>\n\t<numero>" + numero
+				+ "</numero>\n\t<cp>" + cp + "</cp>\n\t<poblacion>" + poblacion + "</poblacion>\n\t<pais>" + pais + "</pais>\n\t<destinatario>" + destinatario
+				+ "</destinatario>\n\t<fechaEntrega>" + fechaEntrega + "</fechaEntrega>\n\t</pedido>";
+	}
 
 
 	public ArrayList<String> getProductos() {
