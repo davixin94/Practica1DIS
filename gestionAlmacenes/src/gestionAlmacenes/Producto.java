@@ -2,6 +2,7 @@ package gestionAlmacenes;
 
 public class Producto {
 	
+
 	private int codigo;
 	private String nombre;
 	private String descripcion;
@@ -71,7 +72,6 @@ public class Producto {
 		this.estado = estado;
 	}
 	
-	
-	
 
+	
 }

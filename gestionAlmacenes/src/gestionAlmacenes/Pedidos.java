@@ -2,8 +2,6 @@ package gestionAlmacenes;
 
 import java.util.ArrayList;
 
-import gestionAlmacenes.Producto;
-
 public class Pedidos {
 	
 	private ArrayList<String> productos;
