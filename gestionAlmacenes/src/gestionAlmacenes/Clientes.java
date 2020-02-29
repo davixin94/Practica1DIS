@@ -117,7 +117,12 @@ public class Clientes {
 		this.pais = pais;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "\t<cliente>\n\t<nombre>" + nombre + "</nombre>\n\t<apellidos>" + apellidos + "</apellidos>\n\t<email>" + email + "</email>\n\t<telefono>" + telefono
+				+ "</telefono>\n\t<calle>" + calle + "</calle>\n\t<numero>" + numero + "</numero>\n\t<cp>" + cp + "</cp>\n\t<poblacion>" + poblacion + "</poblacion>\n\t<pais>"
+				+ pais + "</pais>\n\t</cliente>";
+	}
 	
 	
 }

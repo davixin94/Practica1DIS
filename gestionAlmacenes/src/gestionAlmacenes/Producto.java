@@ -11,6 +11,7 @@ public class Producto {
 	private int estanteria;
 	private	int estante;
 	private boolean estado; //Pendientes
+	
 	public int getCodigo() {
 		return codigo;
 	}
@@ -72,6 +73,12 @@ public class Producto {
 		this.estado = estado;
 	}
 	
+	@Override
+	public String toString() {
+		return "\t<producto>\n\t<codigo>" + codigo + "</codigo>\n\t<nombre>" + nombre + "</nombre>\n\t<descripcion>" + descripcion + "</descripcion>\n\t<stock>" + stock
+				+ "</stock>\n\t<pasillo>" + pasillo + "</pasillo>/n/t<estanteria>" + estanteria + "</estanteria>\n\t<estante>" + estante + "</estante>\n\t<estado>" + estado
+				+ "</estado>\n\t</producto>";
+	}
 
 	
 }
