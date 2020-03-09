@@ -11,7 +11,53 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		int menu = -1;
+		java.io.BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		ArrayList<Producto> productos = new ArrayList<Producto>();
+		ArrayList<Clientes> clientes = new ArrayList<Clientes>();
+		ArrayList<Pedidos> pedidos = new ArrayList<Pedidos>();
+		
+		while(menu != 4) {
+			generarMenu();
+			menu = Integer.parseInt(in.readLine());
+			switch (menu) {
+			case 1:
+				Producto p = subMenuProducto();
+				productos.add(p);
+				break;
+			case 2:
+				Clientes c = subMenuCliente();
+				clientes.add(c);
+				break;
+			case 3:
+				Pedidos ped = subMenuPedidos();
+				pedidos.add(ped);
+				break;
+			case 4:
+				break;
+			default:
+				System.out.println("Por favor, elija una opción válida.");
+			}
+		}
+		
+		String header = "<?xml version=\"1.0\" encoding=\"UTF-8\">\n";
+		String root = "<almacen>\n";
+		String xml = "";
+		xml += header + root;
+		for(Producto p: productos) {
+			xml += p;
+		}
+		for(Clientes c: clientes) {
+			xml += c;
+		}
+		for(Pedidos ped: pedidos) {
+			xml += ped;
+		}
+		String close_root = "\n</almacen>";
+		
+		xml += close_root;
+		writeToFile(xml, "xmlAlmacen.xml");
 	}
 	
 	public static void generarMenu() {
